@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import Navbar from './components/layout/navbar/navbar'
-import Footer from './components/layout/footer/footer'
-import Assignments from './components/assignments/Assignments'
-import Todo from './components/todo/todo'
-import { Status } from './hooks/assignment-hook';
+import React, { useState } from "react";
+import Navbar from "./components/layout/navbar/navbar";
+import Footer from "./components/layout/footer/footer";
+import Assignments from "./components/assignments/Assignments";
+import { Status } from "./hooks/assignment-hook";
 
 function App() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -14,9 +13,6 @@ function App() {
       <Navbar />
       <Assignments statusFilter={filter} />
       <Footer />
-
-      <Todo />
-
     </div>
   );
 }
