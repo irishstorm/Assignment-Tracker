@@ -17,7 +17,6 @@ export interface Assignment {
   subject: string;
   dueDate: string;
   status: Status;
-  name: string;
 }
 
 export function useAssignments() {

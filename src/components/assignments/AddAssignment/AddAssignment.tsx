@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import axios from "axios";
+import Subjects from "../../../data/subjects.json";
+
 export default function AddAssignment() {
   let todaysDate =
     new Date().getFullYear() +
@@ -65,11 +67,9 @@ export default function AddAssignment() {
               setSubject(e.target.value);
             }}
           >
-            <option>Subject</option>
-            <option value="Computer Networking">Computer Networking</option>
-            <option value="Enterprise Applications">
-              Enterprise Applications
-            </option>
+            {Subjects.map((index, key) => {
+              return <option key={key}>{index.name}</option>;
+            })}
           </select>
         </div>
 

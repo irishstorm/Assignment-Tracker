@@ -1,26 +1,6 @@
 [
-  {
-    "assignment": "Assignment 1",
-    "subject": "German",
-    "dueDate": "12/03/2021",
-    "status": "Done"
-  },
-  {
-    "assignment": "Assignment 2",
-    "subject": "Maths",
-    "dueDate": "12/03/2021",
-    "status": "Done"
-  },
-  {
-    "assignment": "Assignment 3",
-    "subject": "Maths",
-    "dueDate": "12/03/2021",
-    "status": "Done"
-  },
-  {
-    "assignment": "Assignment 4",
-    "subject": "English",
-    "dueDate": "12/03/2021",
-    "status": "Done"
-  }
+  { "name": "Subjects" },
+  { "name": "Computer Nextworks" },
+  { "name": "Enterprise Applications" },
+  { "name": "German" }
 ]

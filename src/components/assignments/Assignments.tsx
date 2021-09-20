@@ -9,6 +9,7 @@ import {
   updateAssignment,
 } from "../../hooks/assignment-hook";
 import Modal from "react-modal";
+import Subjects from "../../data/subjects.json";
 
 interface AssignmentProps {
   statusFilter?: Status;
@@ -149,11 +150,9 @@ export default function Assignments({ statusFilter }: AssignmentProps) {
                 setSubject(e.target.value);
               }}
             >
-              <option>Subject</option>
-              <option value="Computer Networking">Computer Networking</option>
-              <option value="Enterprise Applications">
-                Enterprise Applications
-              </option>
+              {Subjects.map((index, key) => {
+                return <option key={key}>{index.name}</option>;
+              })}
             </select>
           </div>
 
