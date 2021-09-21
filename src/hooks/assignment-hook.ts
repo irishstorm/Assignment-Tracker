@@ -8,7 +8,7 @@ const apiUrl = "http://localhost:5000/assignments";
 */
 
 /** The supported values for assignment statuses */
-export type Status = "Done" | "In progress" | "Won't do";
+export type Status = "Done" | "In progress" | "Won't do" | "Not Started";
 
 /* Interfaces should be the source of truth for your data */
 export interface Assignment {

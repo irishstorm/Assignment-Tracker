@@ -104,6 +104,7 @@ export default function AddAssignment() {
           >
             <option>Status</option>
             <option value="Done">Done</option>
+            <option value="Not Started">Not Started</option>
             <option value="In Progress">In Progress</option>
             <option value="Won't do">Won't do</option>
           </select>
