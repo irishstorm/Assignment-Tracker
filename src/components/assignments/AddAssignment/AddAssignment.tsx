@@ -41,6 +41,7 @@ export default function AddAssignment() {
             onChange={(e) => {
               setAssignment(e.target.value);
             }}
+            required
           />
         </div>
 

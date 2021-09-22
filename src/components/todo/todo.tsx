@@ -8,10 +8,11 @@ export default function todo() {
         <li>
           <s>Handle Form Validation - AddAssignment</s>
         </li>
-        <li>Fix select box selected</li>
+
         <li>
           <s>Add Edit and delete functions</s>
         </li>
+
         <li>
           <s>Use a Modal for editing</s>
         </li>
