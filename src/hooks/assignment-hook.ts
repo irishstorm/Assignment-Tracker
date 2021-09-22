@@ -69,3 +69,10 @@ export const updateAssignment = (_id: string, _payload: any) => {
     .then((res) => window.location.reload())
     .catch((err) => console.log(err.data));
 };
+
+export const addAssignment = (_payload: any) => {
+  axios
+    .post(`${apiUrl}/add`, _payload)
+    .then((res) => console.log(res.data))
+    .catch((err) => console.log(err.response.data));
+};

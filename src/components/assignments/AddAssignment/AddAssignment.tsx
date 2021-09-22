@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import axios from "axios";
 import Subjects from "../../../data/subjects.json";
+import { addAssignment } from "../../../hooks/assignment-hook";
 
 export default function AddAssignment() {
   let todaysDate =
@@ -14,7 +15,6 @@ export default function AddAssignment() {
   const [subject, setSubject] = useState("");
   const [dueDate, setDueDate] = useState(todaysDate);
   const [status, setStatus] = useState("");
-  const [errMessage, setErrMessage] = useState("");
 
   const changeOnClick = (e: React.ChangeEvent<any>) => {
     e.preventDefault();
@@ -24,17 +24,7 @@ export default function AddAssignment() {
     setDueDate("");
     setStatus("");
 
-    axios
-      .post("http://localhost:5000/assignments/add", {
-        assignment,
-        subject,
-        dueDate: dueDate,
-        status,
-      })
-      .then((res) => console.log(res.data))
-      .catch((err) => {
-        setErrMessage(err.response.data);
-      });
+    addAssignment({ assignment, subject, dueDate, status });
   };
 
   return (
@@ -117,7 +107,6 @@ export default function AddAssignment() {
           </button>
         </div>
       </form>
-      <div className="mt-2 text-center shake">{errMessage}</div>
     </Container>
   );
 }
