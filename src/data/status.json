@@ -1,0 +1,6 @@
+[
+  { "name": "Done" },
+  { "name": "Not Started" },
+  { "name": "In Progress" },
+  { "name": "Won't Do" }
+]

@@ -5,7 +5,9 @@ export default function todo() {
     <div className="container mt-5">
       <h1>Todo</h1>
       <ul>
-        <li>Handle Form Validation - AddAssignment</li>
+        <li>
+          <s>Handle Form Validation - AddAssignment</s>
+        </li>
         <li>Fix select box selected</li>
         <li>
           <s>Add Edit and delete functions</s>
@@ -13,7 +15,10 @@ export default function todo() {
         <li>
           <s>Use a Modal for editing</s>
         </li>
-        <li>Add a way to edit and remove subjects</li>
+
+        <li>
+          <s>Clean and refactor code</s>
+        </li>
       </ul>
     </div>
   );

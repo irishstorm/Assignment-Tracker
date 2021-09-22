@@ -2,14 +2,11 @@
 import React, { useState } from "react";
 import AddAssignment from "./AddAssignment/AddAssignment";
 import styled from "styled-components";
-import {
-  useFilteredAssignments,
-  Status,
-  deleteAssignment,
-  updateAssignment,
-} from "../../hooks/assignment-hook";
+import { useFilteredAssignments, Status } from "../../hooks/assignment-hook";
+import { deleteAssignment, updateAssignment } from "../../api/api";
 import Modal from "react-modal";
 import Subjects from "../../data/subjects.json";
+import StatusData from "../../data/status.json";
 
 interface AssignmentProps {
   statusFilter?: Status;
@@ -53,8 +50,7 @@ export default function Assignments({ statusFilter }: AssignmentProps) {
   };
 
   return (
-    <Container className="container">
-      <h1 className="text-center mt-5 mb-5">Assignment Tracker</h1>
+    <Container className="container mt-5">
       <div className="row">
         <AddAssignment />
       </div>
@@ -186,10 +182,9 @@ export default function Assignments({ statusFilter }: AssignmentProps) {
               }}
             >
               <option>Status</option>
-              <option value="Done">Done</option>
-              <option value="Not Started">Not Started</option>
-              <option value="In Progress">In Progress</option>
-              <option value="Won't do">Won't do</option>
+              {StatusData.map((index, key) => {
+                return <option key={key}>{index.name}</option>;
+              })}
             </select>
           </div>
 

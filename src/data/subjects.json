@@ -1,5 +1,1 @@
-[
-  { "name": "Subjects" },
-  { "name": "Computer Networks" },
-  { "name": "Enterprise Applications" }
-]
+[{ "name": "Computer Networks" }, { "name": "Enterprise Applications" }]

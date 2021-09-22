@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import axios from "axios";
 import Subjects from "../../../data/subjects.json";
-import { addAssignment } from "../../../hooks/assignment-hook";
+import { addAssignment } from "../../../api/api";
+import StatusData from "../../../data/status.json";
 
 export default function AddAssignment() {
   let todaysDate =
@@ -57,6 +57,7 @@ export default function AddAssignment() {
               setSubject(e.target.value);
             }}
           >
+            <option>Subjects</option>
             {Subjects.map((index, key) => {
               return <option key={key}>{index.name}</option>;
             })}
@@ -93,10 +94,9 @@ export default function AddAssignment() {
             }}
           >
             <option>Status</option>
-            <option value="Done">Done</option>
-            <option value="Not Started">Not Started</option>
-            <option value="In Progress">In Progress</option>
-            <option value="Won't do">Won't do</option>
+            {StatusData.map((index, key) => {
+              return <option key={key}>{index.name}</option>;
+            })}
           </select>
         </div>
 
